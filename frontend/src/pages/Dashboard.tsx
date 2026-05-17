@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import useLeads from '../hooks/useLeads';
@@ -6,6 +7,8 @@ import type { LeadFilters, Lead } from '../types';
 import api from '../services/api';
 import toast from 'react-hot-toast';
 import { LogOut, Plus, Download, Search } from 'lucide-react';
+
+
 
 const statusColors: Record<string, string> = {
   New: 'bg-blue-100 text-blue-700',
@@ -82,14 +85,14 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 ">
       {/* Navbar */}
-      <nav className="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
+      <nav className="bg-white  shadow-sm px-6 py-4 flex justify-between items-center">
         <h1 className="text-xl font-bold text-gray-800">Smart Leads</h1>
         <div className="flex items-center gap-4">
           <span className="text-sm text-gray-600">{user?.name} <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-xs ml-1">{user?.role}</span></span>
           <button onClick={logout} className="flex items-center gap-1 text-gray-500 hover:text-red-500 text-sm">
-            <LogOut size={16} /> Logout
+  <LogOut size={16} /> Logout
           </button>
         </div>
       </nav>
